@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: neo4j-1
+  name: neo4j
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,6 +11,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: servers/server-1
+    path: servers
     repoURL: https://github.com/GBrunelli/neo4j-argocd-cluster-template.git
     targetRevision: HEAD
